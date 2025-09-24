@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página del acordeón</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">🎹 Mi Acordeón 🎹</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#audios">Audios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>La música que nace de mi acordeón</h2>
+      <p>Un espacio para compartir lo que tanto me gusta</p>
+    </div>
+  </section>
+
+  <!-- Audios (escuchar en 1.5 para mas placer) -->
+  <section id="audios" class="section">
+    <div class="container">
+      <h2>🎵 Canciones ya grabadas 😁</h2>
+      <div class="audio-item">
+        <h3>Quitapenas</h3>
+        <audio controls>
+          <source src="audio/quitapenas.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="audio-item">
+        <h3>Katyusha</h3>
+        <audio controls>
+          <source src="audio/katsuya.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="audio-item">
+        <h3>Serva la Boga</h3>
+        <audio controls>
+          <source src="audio/Serva la boga.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+    </div>
+  </section>
+<section id="faq" class="accordion-section">
+  <h2>🙋 Preguntas Frecuentes</h2>
+
+  <button class="accordion">¿Cuándo empecé a tocar y por qué?</button>
+  <div class="panel">
+    <p>Hace relativamente poco, desde Noviembre del 2024 (hace casi un año ya).
+    Empecé porque siempre me gustó este instrumento, el mismo le perteneció a mi abuelo y siempre me gustó cómo tocaba.
+    Con el paso del tiempo siempre busqué aprenderlo pero me frustraba demasiado 😅.
+    Hasta que encontré un profesor muy bueno en Córdoba que me ayudó muchísimo para adentrarme en este nuevo mundo del acordeón.</p>
+  </div>
+
+  <button class="accordion">¿Qué acordeón uso y qué diferencia hay con otros?</button>
+  <div class="panel">
+    <p>El acordeón que uso es un <b>Heimond de 80 bajos</b>.
+    La diferencia entre acordeones radica principalmente en los bajos (botones) y la extensión del teclado.
+    A mayor cantidad de botones, más melodías podés tocar, al igual que en el teclado.
+    Es como "ampliar una paleta de colores": no es lo mismo tener 3 colores primarios que todos los colores secundarios.</p>
+  </div>
+
+  <button class="accordion">¿Qué géneros me gustan más?</button>
+  <div class="panel">
+    <p>Obviamente el <b>cuarteto</b>, aunque es un género muy rápido de tocar (y aún soy muy nuevo).
+    Por eso también me gustan los derivados como el pasodoble, las polcas, tarantelas y algunas cumbias.
+    De igual forma, algunos cuartetos ya pude aprender.</p>
+  </div>
+
+</section>
+  <!-- Galería (de a poco van a ir habiendo mas fotos) -->
+  <section id="galeria" class="section">
+    <div class="container">
+      <h2>📸 Galería</h2>
+     <div class="galeria">
+    <img src="img/yo y acordeon 1.jpg" alt="Mi acordeón tocando en casa">
+  </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2>📩 Contacto</h2>
+      <form class="contact-form">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" placeholder="Tu nombre" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="tu@email.com" required>
+
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" placeholder="Ej: 341-xxxxxxx">
+
+        <label for="genre">¿Qué género te gusta más?</label>
+        <select id="genre">
+          <option value="chamame">Cuarteto</option>
+          <option value="tango">Tango</option>
+          <option value="cumbia">Cumbia</option>
+        </select>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" rows="4" placeholder="Escribí tu mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Hecho por Fede</p>
+  </footer>
+
+   <!--EFECTO ACORDEON PARA UNA PAGINA SOBRE MI ACORDEON 🤣-->
+  <script>
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const panel = btn.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
