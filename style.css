@@ -127,13 +127,39 @@ audio {
 }
 
 /* Footer */
-.site-footer {
+footer {
+  background-color: #111;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background: var(--primary);
-  color: var(--light);
-  font-size: 0.9rem;
+  padding: 20px 10px;
   margin-top: 40px;
+}
+
+.footer-contenido p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.redes {
+  margin: 10px 0;
+}
+
+.redes a img {
+  width: 30px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1); /* Los pone en blanco */
+  transition: transform 0.3s;
+}
+
+.redes a img:hover {
+  transform: scale(1.2);
+  filter: brightness(1) invert(0); /* Vuelve a color en hover */
+}
+
+.copy {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #aaa;
 }
 body {
   font-family: var(--font-body);
